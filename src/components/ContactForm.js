@@ -79,6 +79,7 @@ const ContactForm = () => {
             name="firstName"
             value={form.firstName}
             id="firstName"
+            data-testid="fn"
             placeholder="Edd"
           />
           {(errors.firstName) && <p data-testid="error">Error: {errors.firstName}</p>}
@@ -89,6 +90,7 @@ const ContactForm = () => {
           <input
             onChange={handleChange}
             id="lastName"
+            data-testid="ln"
             name="lastName"
             value={form.lastName}
             placeholder="Burke"
@@ -101,6 +103,7 @@ const ContactForm = () => {
           <input 
             onChange={handleChange}
             id="email"
+            data-testid="email"
             name="email" 
             value={form.email}
             placeholder="bluebill1049@hotmail.com"
@@ -114,6 +117,7 @@ const ContactForm = () => {
             onChange={handleChange}
             name="message"
             id="message"
+            data-testid="message"
             value={form.message}
           />
           {(errors.message) && <p data-testid="error">Error: {errors.message}</p>}
@@ -121,7 +125,7 @@ const ContactForm = () => {
 
         {displayData && <DisplayComponent form={form}/>}
 
-        <input type="submit" />
+        <input type="submit" data-testid="submit" />
       </form>
     </div>
   );
